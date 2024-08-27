@@ -2,6 +2,9 @@ body {
     background-color: rgb(138, 138, 138);
 }
 
+p {
+    margin: 0;
+}
 
 #container  {
     display: flex;
@@ -14,24 +17,44 @@ body {
 }
 
 
+#display, 
+#current-calc {
+    color: rgb(46, 160, 46);
+    box-sizing: border-box;
+    font-family: monospace;
+    text-align: right;
+    width: 400px;
+    padding: 8px;
+}
+
+
 #display {
     background-color: black;
     border-radius: 8px 8px 0 0;
-    color: green;
-    height: 300px;
-    width: 400px;
+    font-size: 18pt;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+#display p {
+    width: 384px;
 }
 
 
 #current-calc {
-    
+    background-color: rgb(26, 26, 26);
+    font-size: 24pt;    
+    height: 55px;
 }
 
 
 .btn-calc{
     background-color: rgb(99, 99, 99);
     border-radius: 0 0 8px 8px;
-    height: 272px;
+    box-sizing: border-box;
+    height: 300px;
     padding: 8px;
 }
 

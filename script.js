@@ -40,6 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             let num = numbers[index];
             alert("I'm number " + num);
+
+            (num) => {
+                
+            }
         });
     });
 
