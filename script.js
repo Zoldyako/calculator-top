@@ -1,11 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     let a, b, operator, result = [];
+    let numbers = [ 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 ];
 
-    // const btn_add = document.getElementById('btn_add');
-    // const btn_sub = document.getElementById('btn_sub');
-    // const btn_mult = document.getElementById('btn_mult');
-    // const btn_divi = document.getElementById('btn_divi');
-    // const btn_equal = document.getElementById('btn_equal');
+
+    const btn_add   = document.querySelector('.btn-add');
+    const btn_sub   = document.querySelector('.btn-sub');
+    const btn_mult  = document.querySelector('.btn-mult');
+    const btn_div   = document.querySelector('.btn-div');
+    const btn_equal = document.querySelector('.btn-equal');
+    const btn_clear = document.querySelector('.btn-clear');
+
+
+    btn_add.addEventListener('click', () => { operator = '+'; });
+    btn_sub.addEventListener('click', () => { operator = '-'; });
+    btn_mult.addEventListener('click', () => { operator = '*'; });
+    btn_div.addEventListener('click', () => { operator = '/'; });
+    
 
 
     function operate(a, b, operator) {
@@ -16,24 +26,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+
+
     function populateDisplay() {
         
     }
 
 
-    let buttons = document.querySelectorAll('.calc_btns');
+    let btn_numbers = document.querySelectorAll('.btn-number');
 
-    buttons.forEach((button) => { 
-            button.addEventListener('click', () => { 
-                alert('BUTÃO');
-            });
+    
+    btn_numbers.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            let num = numbers[index];
+            alert("I'm number " + num);
+        });
     });
 
 
-    // btn_add.addEventListener('click', () => { operator = '+'; });
-    // btn_sub.addEventListener('click', () => { operator = '-'; });
-    // btn_mult.addEventListener('click', () => { operator = '*'; });
-    // btn_divi.addEventListener('click', () => { operator = '/'; });
+    
     // btn_equal.addEventListener('click', () => {
         
     //     if (a === undefined || b === undefined) {
