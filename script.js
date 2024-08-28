@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const btn_div   = document.querySelector('.btn-div');
     const btn_equal = document.querySelector('.btn-equal');
     const btn_clear = document.querySelector('.btn-clear');
+    const display   = document.querySelector('#display');
+    const current   = document.querySelector('#current-calc');
 
 
     btn_add.addEventListener('click', () => { operator = '+'; });
@@ -26,11 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-
-
     function populateDisplay() {
         
     }
+
+
+    function addToCurrentCalc(variable) {
+        let p = document.createElement('p');
+        p.innerText = variable
+        current.appendChild(p);
+    }
+
 
 
     let btn_numbers = document.querySelectorAll('.btn-number');
@@ -41,9 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let num = numbers[index];
             alert("I'm number " + num);
 
-            (num) => {
-                
-            }
+            addToCurrentCalc(num);
         });
     });
 

@@ -38,10 +38,6 @@ p {
     justify-content: end;
 }
 
-#display p {
-    width: 384px;
-}
-
 
 #current-calc {
     background-color: rgb(26, 26, 26);
