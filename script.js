@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function addToCurrentCalc(text) {
-        current.innerText += text;
+        CURRENT.innerText += text;
     }
 
     
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     BTN_CLEAR.addEventListener('click', () => { 
-        current.innerText = '';
+        CURRENT.innerText = '';
     });
 
 
