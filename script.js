@@ -1,23 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let a, b, operator, result = [];
+    let a, b, result = [];
+    let operator = ["+", "-", "*", "/"];
     let numbers = [ 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 ];
 
-
-    const btn_add   = document.querySelector('.btn-add');
-    const btn_sub   = document.querySelector('.btn-sub');
-    const btn_mult  = document.querySelector('.btn-mult');
-    const btn_div   = document.querySelector('.btn-div');
-    const btn_equal = document.querySelector('.btn-equal');
-    const btn_clear = document.querySelector('.btn-clear');
-    const display   = document.querySelector('#display');
-    const current   = document.querySelector('#current-calc');
-
-
-    btn_add.addEventListener('click', () => { operator = '+'; });
-    btn_sub.addEventListener('click', () => { operator = '-'; });
-    btn_mult.addEventListener('click', () => { operator = '*'; });
-    btn_div.addEventListener('click', () => { operator = '/'; });
-    
+    const BTN_OPERATOR  = document.querySelectorAll('.btn-operator');
+    const BTN_NUMBERS   = document.querySelectorAll('.btn-number');
+    const BTN_EQUAL     = document.querySelector('.btn-equal');
+    const BTN_CLEAR     = document.querySelector('.btn-clear');
+    const DISPLAY       = document.querySelector('#display');
+    const CURRENT       = document.querySelector('#current-calc');
 
 
     function operate(a, b, operator) {
@@ -33,23 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    function addToCurrentCalc(variable) {
-        current.innerText += variable;
+    function addToCurrentCalc(text) {
+        current.innerText += text;
     }
 
-
-
-    let btn_numbers = document.querySelectorAll('.btn-number');
-
     
-    btn_numbers.forEach((button, index) => {
+    BTN_NUMBERS.forEach((button, index) => {
         button.addEventListener('click', () => {
             addToCurrentCalc(numbers[index]);
         });
     });
 
 
-    btn_clear.addEventListener('click', () => { 
+    BTN_CLEAR.addEventListener('click', () => { 
         current.innerText = '';
     });
 
