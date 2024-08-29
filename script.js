@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     let a, b, result = [];
-    let operator = ["+", "-", "*", "/"];
+    let operators = ["+", "-", "*", "/"];
     let numbers = [ 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 ];
 
-    const BTN_OPERATOR  = document.querySelectorAll('.btn-operator');
+    const BTN_OPERATORS  = document.querySelectorAll('.btn-operator');
     const BTN_NUMBERS   = document.querySelectorAll('.btn-number');
     const BTN_EQUAL     = document.querySelector('.btn-equal');
     const BTN_CLEAR     = document.querySelector('.btn-clear');
@@ -38,6 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     BTN_CLEAR.addEventListener('click', () => { 
         CURRENT.innerText = '';
+    });
+
+
+    BTN_OPERATORS.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            addToCurrentCalc(operators[index]);
+        });
     });
 
 
