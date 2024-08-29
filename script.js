@@ -46,10 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     btn_numbers.forEach((button, index) => {
         button.addEventListener('click', () => {
-            let num = numbers[index];
-            alert("I'm number " + num);
-
-            addToCurrentCalc(num);
+            
+            addToCurrentCalc(numbers[index]);
         });
     });
 
