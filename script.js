@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     let a, b, result = [];
-    let operators = ["+", "-", "*", "/"];
+    let operators = ["+", "-", "*", "%"];
     let numbers = [ 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 ];
 
     const BTN_OPERATORS  = document.querySelectorAll('.btn-operator');
@@ -25,6 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function addToCurrentCalc(text) {
+        if (CURRENT.innerText.length >= 20) {
+            return alert("Máximo de 20 dígitos");
+        }
+
+
         CURRENT.innerText += text;
     }
 
