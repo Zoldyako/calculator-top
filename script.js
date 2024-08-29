@@ -34,9 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function addToCurrentCalc(variable) {
-        let p = document.createElement('p');
-        p.innerText = variable
-        current.appendChild(p);
+        current.innerText += variable;
     }
 
 
@@ -46,10 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
     
     btn_numbers.forEach((button, index) => {
         button.addEventListener('click', () => {
-            
             addToCurrentCalc(numbers[index]);
         });
     });
+
+
+    btn_clear.addEventListener('click', () => { 
+        current.innerText = '';
+    });
+
+
+
 
 
     

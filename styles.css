@@ -40,6 +40,7 @@ p {
 
 
 #current-calc {
+    display: flex;
     background-color: rgb(26, 26, 26);
     font-size: 24pt;    
     height: 55px;
