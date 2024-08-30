@@ -17,7 +17,7 @@ p {
 }
 
 
-#display, 
+#history, 
 #current-calc {
     color: rgb(46, 160, 46);
     box-sizing: border-box;
@@ -28,7 +28,7 @@ p {
 }
 
 
-#display {
+#history {
     background-color: black;
     border-radius: 8px 8px 0 0;
     font-size: 18pt;

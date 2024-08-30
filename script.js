@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const BTN_NUMBERS   = document.querySelectorAll('.btn-number');
     const BTN_EQUAL     = document.querySelector('.btn-equal');
     const BTN_CLEAR     = document.querySelector('.btn-clear');
-    const DISPLAY       = document.querySelector('#display');
-    const CURRENT       = document.querySelector('#current-calc');
+    const HISTORY       = document.querySelector('#history');
+    const CURRENT       = document.querySelector('#current-calc p');
 
 
     function operate(a, b, operator) {
@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function populateDisplay(CURRENT) {
         let history = document.createElement('p');
-        history.innerText = CURRENT;
+        history.innerText = CURRENT.innerText;
 
-        DISPLAY.appendChild(history);
+        HISTORY.appendChild(history);
     }
 
 
