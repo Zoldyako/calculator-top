@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const BTN_EQUAL     = document.querySelector('.btn-equal');
     const BTN_CLEAR     = document.querySelector('.btn-clear');
     const HISTORY       = document.querySelector('#history');
-    const CURRENT       = document.querySelector('#current-calc p');
+    const CURRENT       = document.querySelector('#current-calc');
 
 
     function operate(a, b, operator) {
