@@ -41,8 +41,9 @@ p {
 
 #current-calc {
     display: flex;
+    justify-content: end;
     background-color: rgb(26, 26, 26);
-    font-size: 24pt;    
+    font-size: 22pt;    
     height: 55px;
 }
 
