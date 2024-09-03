@@ -8,6 +8,7 @@ const BTN_OPERATORS = document.querySelectorAll('.btn-operator');
 const BTN_NUMBERS   = document.querySelectorAll('.btn-number');
 const BTN_EQUAL     = document.querySelector('.btn-equal');
 const BTN_CLEAR     = document.querySelector('.btn-clear');
+const BTN_DOT       = document.querySelector('.btn-dot');
 const HISTORY       = document.querySelector('#history');
 const CURRENT       = document.querySelector('#current-calc');
 
@@ -38,7 +39,7 @@ function operate(a, b, operator) {
         CURRENT.innerText = ''
         currentNumber = 0;
         previousNumber = 0;
-        alert("You didn't select any operation")
+        alert("You didn't select any operation");
     }
 
     else if (computation.toString().split('.')[1]?.length > 1) {
@@ -66,8 +67,7 @@ function addToCurrentCalc(text) {
         return alert("Máximo de 20 dígitos");
     }
 
-    CURRENT.innerText += text;
-    
+    CURRENT.innerText += text;   
 }
 
 
@@ -104,11 +104,18 @@ BTN_OPERATORS.forEach((button, index) => {
 });
 
 
+BTN_DOT.addEventListener('click', () => {
+    if (!CURRENT.innerText.includes('.')) {
+        CURRENT.innerText += '.';
+    }
+});
+
+
 BTN_EQUAL.addEventListener('click', () => {
 
     if (previousNumber == 0 &&  currentNumber == 0 && operator == '/') {
         alert("You can't divide nothing for nothing dummy :P");
-        return
+        return;
     }
 
     else if (previousNumber == 0 && currentNumber == 0) {
