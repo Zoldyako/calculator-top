@@ -1,16 +1,17 @@
-let currentNumber = 0, previousNumber = 0, operator, result = [];
-let operators = ["%", "+", "-", "*", "/"];
-let numbers = [ 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 ];
-let isOperatorClicked = false;
+let currentNumber       = 0, previousNumber = 0, operator, result = [];
+let operators           = ["%", "+", "-", "*", "/"];
+let numbers             = [ 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 ];
+let isOperatorClicked   = false;
 
 
-const BTN_OPERATORS = document.querySelectorAll('.btn-operator');
-const BTN_NUMBERS   = document.querySelectorAll('.btn-number');
-const BTN_EQUAL     = document.querySelector('.btn-equal');
-const BTN_CLEAR     = document.querySelector('.btn-clear');
-const BTN_DOT       = document.querySelector('.btn-dot');
-const HISTORY       = document.querySelector('#history');
-const CURRENT       = document.querySelector('#current-calc');
+const BTN_OPERATORS     = document.querySelectorAll('.btn-operator');
+const BTN_NUMBERS       = document.querySelectorAll('.btn-number');
+const BTN_EQUAL         = document.querySelector('.btn-equal');
+const BTN_CLEAR         = document.querySelector('.btn-clear');
+const BTN_DOT           = document.querySelector('.btn-dot');
+const BTN_DEL           = document.querySelector('.btn-del');
+const HISTORY           = document.querySelector('#history');
+const CURRENT           = document.querySelector('#current-calc');
 
 
 function operate(a, b, operator) {
@@ -108,6 +109,13 @@ BTN_DOT.addEventListener('click', () => {
     if (!CURRENT.innerText.includes('.')) {
         CURRENT.innerText += '.';
     }
+});
+
+
+BTN_DEL.addEventListener('click', () => {
+    CURRENT.innerText = CURRENT.innerText.slice(0, -1);
+    
+    currentNumber = parseFloat(CURRENT.innerText);
 });
 
 
