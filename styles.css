@@ -52,8 +52,14 @@ p {
     background-color: rgb(99, 99, 99);
     border-radius: 0 0 8px 8px;
     box-sizing: border-box;
-    height: 300px;
+    height: 360px;
     padding: 8px;
+}
+
+
+.btn-clear,
+.btn-zero {
+    width: 180px;
 }
 
 

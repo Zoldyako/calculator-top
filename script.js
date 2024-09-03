@@ -1,5 +1,5 @@
 let currentNumber = 0, previousNumber = 0, operator, result = [];
-let operators = ["+", "-", "*", "/"];
+let operators = ["%", "+", "-", "*", "/"];
 let numbers = [ 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 ];
 let isOperatorClicked = false;
 
@@ -16,6 +16,9 @@ function operate(a, b, operator) {
     let computation;
     
     switch (operator) {
+        case '%':
+            computation = a % b;
+            break;
         case '+':
             computation = a + b;
             break;
